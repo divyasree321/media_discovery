@@ -1,4 +1,6 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 
 *{
     margin:0;
@@ -6,16 +8,26 @@
     box-sizing:border-box;
 }
 
-/* VARIABLES */
+/* =========================
+   VARIABLES
+========================= */
 
 :root{
     --bg:#0f172a;
     --card:#1e293b;
-    --accent:#38bdf8;
+
+    /* Brown Accent */
+    --accent:#8B5E3C;
+
+    /* Green Accent */
+    --secondary:#4CAF50;
+
     --text:#ffffff;
 }
 
-/* SMOOTH SCROLL */
+/* =========================
+   SMOOTH SCROLL
+========================= */
 
 html{
     scroll-behavior:smooth;
@@ -26,7 +38,9 @@ body{
     background:#0f172a;
 }
 
-/* DARK MODE */
+/* =========================
+   DARK MODE
+========================= */
 
 #dark-toggle{
     display:none;
@@ -37,8 +51,8 @@ body{
     top:90px;
     right:20px;
 
-    background:#38bdf8;
-    color:black;
+    background:var(--accent);
+    color:white;
 
     padding:10px 15px;
 
@@ -49,6 +63,8 @@ body{
     font-weight:bold;
 
     z-index:2000;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 .website{
@@ -85,7 +101,9 @@ textarea{
     color:black;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 
 nav{
     position:sticky;
@@ -104,6 +122,7 @@ nav{
 .logo{
     font-size:30px;
     font-weight:bold;
+    color:var(--secondary);
 }
 
 nav ul{
@@ -119,12 +138,15 @@ nav a{
 }
 
 nav a:hover{
-    color:var(--accent);
+    color:var(--secondary);
 }
 
-/* HERO */
+/* =========================
+   HERO SECTION
+========================= */
 
 .hero{
+
     height:100vh;
 
     display:flex;
@@ -136,6 +158,13 @@ nav a:hover{
     text-align:center;
 
     padding:20px;
+
+    background:
+    linear-gradient(
+    135deg,
+    rgba(139,94,60,0.15),
+    rgba(76,175,80,0.15)
+    );
 }
 
 .hero h3{
@@ -150,8 +179,8 @@ nav a:hover{
 
     background:linear-gradient(
         to right,
-        #38bdf8,
-        #818cf8
+        var(--accent),
+        var(--secondary)
     );
 
     background-clip:text;
@@ -183,7 +212,7 @@ nav a:hover{
 
     background:var(--accent);
 
-    color:black;
+    color:white;
 
     padding:15px 30px;
 
@@ -195,10 +224,15 @@ nav a:hover{
 }
 
 .btn:hover{
+
+    background:var(--secondary);
+
     transform:scale(1.05);
 }
 
-/* SECTIONS */
+/* =========================
+   SECTION
+========================= */
 
 section{
     padding:80px 10%;
@@ -208,9 +242,12 @@ section h2{
     text-align:center;
     margin-bottom:40px;
     font-size:40px;
+    color:var(--secondary);
 }
 
-/* GALLERY */
+/* =========================
+   GALLERY
+========================= */
 
 .gallery{
 
@@ -233,6 +270,9 @@ section h2{
     text-align:center;
 
     transition:0.3s;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.3);
 }
 
 .card:hover{
@@ -241,7 +281,7 @@ section h2{
     translateY(-10px);
 
     box-shadow:
-    0 10px 20px rgba(0,0,0,0.4);
+    0 10px 25px rgba(0,0,0,0.5);
 }
 
 .card img{
@@ -257,13 +297,17 @@ section h2{
 
 .card h3{
     margin-top:15px;
+    color:var(--secondary);
 }
 
 .card p{
     margin-top:10px;
+    line-height:1.6;
 }
 
-/* CARD BUTTON */
+/* =========================
+   CARD BUTTON
+========================= */
 
 .card a{
 
@@ -275,16 +319,25 @@ section h2{
 
     background:var(--accent);
 
-    color:black;
+    color:white;
 
     padding:10px 15px;
 
     border-radius:8px;
 
     font-weight:bold;
+
+    transition:0.3s;
 }
 
-/* CONTACT */
+.card a:hover{
+
+    background:var(--secondary);
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
 
 form{
 
@@ -314,7 +367,7 @@ textarea{
 input:focus,
 textarea:focus{
 
-    outline:3px solid var(--accent);
+    outline:3px solid var(--secondary);
 }
 
 button{
@@ -327,6 +380,8 @@ button{
 
     background:var(--accent);
 
+    color:white;
+
     font-weight:bold;
 
     cursor:pointer;
@@ -336,10 +391,14 @@ button{
 
 button:hover{
 
+    background:var(--secondary);
+
     transform:scale(1.03);
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
 
@@ -368,7 +427,7 @@ footer{
 
 .footer-links a:hover{
 
-    color:var(--accent);
+    color:var(--secondary);
 }
 
 .top-btn{
@@ -384,7 +443,14 @@ footer{
     font-weight:bold;
 }
 
-/* RESPONSIVE DESIGN BONUS */
+.top-btn:hover{
+
+    color:var(--secondary);
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
 
 @media(max-width:768px){
 
